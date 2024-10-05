@@ -10,7 +10,7 @@ from fabric.api import env, local, put, run
 from datetime import datetime
 from os.path import exists, isdir
 
-env.hosts = ["3.90.205.72", "54.163.216.239"]
+env.hosts = ["52.1.22.58", "54.235.17.2"]
 
 
 def do_pack():
@@ -52,4 +52,3 @@ def deploy():
     archive_path = do_pack()
     if archive_path is None:
         return False
-    return do_deploy(archive_path)
